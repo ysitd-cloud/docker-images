@@ -1,4 +1,5 @@
 FROM gcr.io/google_containers/heapster-grafana-amd64:v4.4.3
 
-RUN grafana-cli plugins install grafana-azure-monitor-datasource && \
-    grafana-cli plugins install raintank-kubernetes-app
+ADD grafana-azure-monitor-datasource /var/lib/grafana/plugins/grafana-azure-monitor-datasource
+
+ADD raintank-kubernetes-app /var/lib/grafana/plugins/raintank-kubernetes-app 
