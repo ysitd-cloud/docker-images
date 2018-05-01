@@ -1,3 +1,3 @@
 FROM alpine:3.7
 
-RUN apk install --no-cache ca-certificates
+RUN apk add --no-cache ca-certificates
